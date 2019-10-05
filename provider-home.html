@@ -34,10 +34,41 @@
           <img id="logo" src="./assets/images/medical-logo.png" alt="" />
         </div>
       </header>
-      <div class="btn-container">
-        <button class="btn"><a href="patient-home.html">Patient</a></button>
-        <button class="btn"><a href="provider-home.html">Provider</a></button>
-      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>patient</th>
+            <th>last recorded session</th>
+          </tr>
+        </thead>
+        <tbody id="tableData"></tbody>
+      </table>
+
+      <form role="form">
+        <div class="row">
+          <label for="train-input">Patient Name:</label>
+          <input id="train-input" type="text" />
+        </div>
+        <div class="row">
+          <label for="destination-input">Age:</label>
+          <input id="destination-input" type="text" />
+        </div>
+        <div class="row">
+          <label for="frequency-input">Fitbit ID:</label>
+          <input id="frequency-input" type="text" />
+        </div>
+        <div class="row">
+          <label for="arrival-input">Email:</label>
+          <input id="arrival-input" type="text" />
+        </div>
+        <div class="add-btn-container">
+          <button id="add-btn" type="submit">
+            add patient
+          </button>
+        </div>
+      </form>
+
       <footer>
         <p id="copyright">
           Copyright &copy;
