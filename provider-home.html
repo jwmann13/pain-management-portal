@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <title>Pain Treatment Survey</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="Pain Treatment Survey" />
+    <meta
+      name="keywords"
+      content="pain treatment, pain management, survey, heart rate, web developement"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Styling -->
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
+    <!-- Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Firebase Core JavaScript Link -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <!-- Specific Firebase products we want (Database) -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+  </head>
+
+  <body>
+    <div class="page-container">
+      <header>
+        <h1>Pain Treatment Survey</h1>
+        <div class="logo-container">
+          <img id="logo" src="./assets/images/medical-logo.png" alt="" />
+        </div>
+      </header>
+
+      <table>
+        <thead>
+          <tr>
+            <th>patient</th>
+            <th>last recorded session</th>
+          </tr>
+        </thead>
+        <tbody id="tableData"></tbody>
+      </table>
+
+      <form role="form">
+        <div class="row">
+          <label for="train-input">Patient Name:</label>
+          <input id="train-input" type="text" />
+        </div>
+        <div class="row">
+          <label for="destination-input">Age:</label>
+          <input id="destination-input" type="text" />
+        </div>
+        <div class="row">
+          <label for="frequency-input">Fitbit ID:</label>
+          <input id="frequency-input" type="text" />
+        </div>
+        <div class="row">
+          <label for="arrival-input">Email:</label>
+          <input id="arrival-input" type="text" />
+        </div>
+        <div class="add-btn-container">
+          <button id="add-btn" type="submit">
+            add patient
+          </button>
+        </div>
+      </form>
+
+      <footer>
+        <p id="copyright">
+          Copyright &copy;
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+        </p>
+      </footer>
+    </div>
+    <!-- Javascript -->
+    <script type="text/javascript" src="assets/javascript/script.js"></script>
+  </body>
+</html>
