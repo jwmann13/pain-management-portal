@@ -183,6 +183,52 @@ div.add-patient-row {
   filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.2));
 }
 
+#submit-survey-btn {
+  font-size: 0.8em;
+  background-color: rgb(56, 118, 166);
+  color: white;
+  padding: 6px 12px 6px 12px;
+  border-radius: 12px;
+  border-style: none;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+#submit-survey-btn:hover {
+  transform: translatey(-1.5px);
+  -webkit-filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.4));
+  filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.2));
+}
+
+#submit-survey-btn:active {
+  transform: translateY(-0.2px);
+  -webkit-filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.4));
+  filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.2));
+}
+
+#patient-home-btn {
+  font-size: 0.8em;
+  background-color: rgb(56, 118, 166);
+  color: white;
+  padding: 6px 12px 6px 12px;
+  border-radius: 12px;
+  border-style: none;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+#patient-home-btn:hover {
+  transform: translatey(-1.5px);
+  -webkit-filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.4));
+  filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.2));
+}
+
+#patient-home-btn:active {
+  transform: translateY(-0.2px);
+  -webkit-filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.4));
+  filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.2));
+}
+
 footer {
   background-color: rgb(
     102,
