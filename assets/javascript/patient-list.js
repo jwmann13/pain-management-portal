@@ -19,8 +19,7 @@ var patientName;
 var patientAge;
 var patientFitbit;
 var patientEmail;
-
-let patientData = [];
+var lastRecordedSession;
 
 // Capture Button Click
 $("#add-btn").on("click", function(event) {
@@ -39,13 +38,19 @@ $("#add-btn").on("click", function(event) {
   patientEmail = $("#email-input")
     .val()
     .trim();
+  lastRecordedSession = $("#session-input")
+    .val()
+    .trim();
 
   // Code for handling the push
   var patientObject = {
     patient: patientName,
     age: patientAge,
     fitbit: patientFitbit,
-    email: patientEmail
+    email: patientEmail,
+    sessions: {
+      date: lastRecordedSession
+    }
   };
   database.ref().push(patientObject);
 });
@@ -82,9 +87,7 @@ function addPatientRow(element, uniqueID) {
   const tableBody = document.getElementById("tableData");
   let dataHtml = `<tr id=${uniqueID}>
           <td>${element.patient}</td>
-          <td>${element.age}</td>
-          <td>${element.fitbit}</td>
-          <td>${element.email}</td>
+          <td>${element.sessions.date}</td>
           <td><a onclick="removePatientFromDatabase('${uniqueID}');">X</a></td>
         </tr>`;
   tableBody.innerHTML += dataHtml;

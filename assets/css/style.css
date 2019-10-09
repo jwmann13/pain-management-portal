@@ -99,7 +99,7 @@ a {
   filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.2));
 }
 
-table {
+#patient-table {
   margin: 30px 0px 0px 5%;
   border-collapse: collapse;
   width: 90%;
@@ -124,24 +124,32 @@ tr:hover {
   cursor: pointer;
 }
 
-form {
+.add-patient-form {
   margin: 50px 0px 0px 0px;
   float: right;
 }
 
-label {
+#name-label,
+#age-label,
+#email-label,
+#fitbit-label,
+#session-label {
   display: table-cell;
   text-align: right;
 }
 
-input {
+#name-input,
+#age-input,
+#email-input,
+#fitbit-input,
+#session-input {
   display: table-cell;
   margin: 5px 0px 0px 10px;
   width: 60%;
   text-align: center;
 }
 
-div.row {
+div.add-patient-row {
   display: table-row;
 }
 
