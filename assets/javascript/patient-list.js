@@ -47,7 +47,7 @@ $("#add-btn").on("click", function(event) {
     fitbit: patientFitbit,
     email: patientEmail
   };
-  database.ref().push(patientObject);
+  database.ref('patients/').push(patientObject);
 });
 
 // Firebase watcher .on("child_added")

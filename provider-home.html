@@ -35,32 +35,36 @@
         </div>
       </header>
 
-      <table>
-        <thead>
-          <tr>
-            <th>patient</th>
-            <th>last recorded session</th>
+      <table id="patient-table">
+        <thead id="patient-table-head">
+          <tr id="patient-table-row">
+            <th id="patient-table-column">patient</th>
+            <th id="patient-table-column">last recorded session</th>
           </tr>
         </thead>
         <tbody id="tableData"></tbody>
       </table>
 
-      <form role="form">
-        <div class="row">
-          <label for="name-input">Patient Name:</label>
+      <form class="add-patient-form" role="form">
+        <div class="add-patient-row">
+          <label id="name-label" for="name-input">Patient Name:</label>
           <input id="name-input" type="text" />
         </div>
-        <div class="row">
-          <label for="age-input">Age:</label>
+        <div class="add-patient-row">
+          <label id="age-label" for="age-input">Age:</label>
           <input id="age-input" type="text" />
         </div>
-        <div class="row">
-          <label for="fitbit-input">Fitbit ID:</label>
+        <div class="add-patient-row">
+          <label id="email-label" for="email-input">Email:</label>
+          <input id="email-input" type="text" />
+        </div>
+        <div class="add-patient-row">
+          <label id="fitbit-label" for="fitbit-input">Fitbit ID:</label>
           <input id="fitbit-input" type="text" />
         </div>
-        <div class="row">
-          <label for="email-input">Email:</label>
-          <input id="email-input" type="text" />
+        <div class="add-patient-row">
+          <label id="session-label" for="session-input">Last Session:</label>
+          <input id="session-input" type="text" />
         </div>
         <div class="add-btn-container">
           <button id="add-btn" type="submit">
