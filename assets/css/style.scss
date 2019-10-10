@@ -20,7 +20,9 @@ body {
 }
 
 header {
-  text-align: center;
+  position: relative;
+  display: grid;
+  align-items: center;
   background-color: rgb(
     102,
     179,
@@ -37,18 +39,21 @@ header {
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
 }
 
-.logo-container {
-  float: right;
-  margin: -45px 40px 0px 0px;
+header .logo-container {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  margin-right: 20px;
 }
 
 #logo {
   width: 60px;
 }
 
-h1 {
+header h1 {
   color: white;
-  margin-top: 20px;
+  margin: auto;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: bold;
@@ -56,7 +61,6 @@ h1 {
   text-shadow: (1px 1px 3px rgba(0, 0, 0, 0.2));
   @media screen and (max-width: 640px) {
     font-size: 1em;
-    margin: 25px 0px 0px 0px;
   }
 }
 
@@ -199,13 +203,13 @@ footer {
   width: 100%;
   bottom: 0;
   left: 0;
-  text-align: center;
+  display: grid;
+  place-items: center;
   box-shadow: 0px -10px 10px rgba(0, 0, 0, 0.5);
 }
 
 #copyright {
   color: white;
   font-size: 0.8em;
-  margin-top: 10px;
   text-shadow: (1px 1px 3px rgba(0, 0, 0, 0.2));
 }
