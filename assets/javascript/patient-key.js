@@ -9,11 +9,24 @@
 //     measurementId: "G-LQK0SJKC5D"
 // };
 
-// firebase.initializeApp(config);
+var config = {
+    apiKey: "AIzaSyAARBRklYvGPYYT7lRMiFDolSgRivtuq3s",
+    authDomain: "gt-project-1-group-11-b08d3.firebaseapp.com",
+    databaseURL: "https://gt-project-1-group-11-b08d3.firebaseio.com",
+    projectId: "gt-project-1-group-11-b08d3",
+    storageBucket: "gt-project-1-group-11-b08d3.appspot.com",
+    messagingSenderId: "986153651299",
+    appId: "1:986153651299:web:560e09006a98a2ceecbc56",
+    measurementId: "G-LC5DNRC73Q"
+  };
 
-// var database = firebase.database();
+firebase.initializeApp(config);
 
-$('#add-btn').on('click', function(event) {
+var database = firebase.database();
+
+$('#patient-home-btn').on('click', function(event) {
     event.preventDefault();
-    console.log($('#patient-home-name').val().trim());
+
+    database.ref().push()
+    console.log($('#patient-home-email').val().trim());
 });
