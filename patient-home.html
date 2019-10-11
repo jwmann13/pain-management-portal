@@ -1,66 +1,67 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
-    <title>Pain Treatment Plan</title>
-    <meta charset="utf-8" />
-    <meta name="description" content="Pain Treatment Plan" />
-    <meta
-      name="keywords"
-      content="pain treatment, pain management, survey, heart rate, web developement"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <!-- Styling -->
-    <link rel="stylesheet" href="assets/css/reset.css" />
-    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
-      rel="stylesheet"
-    />
-    <!-- Jquery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- Firebase Core JavaScript Link -->
-    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
-    <!-- Specific Firebase products we want (Database) -->
-    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
-  </head>
 
-  <body>
-    <div class="page-container">
-      <header>
-        <h1>Pain Treatment Plan</h1>
-        <div class="logo-container">
-          <img id="logo" src="./assets/images/medical-logo.png" alt="" />
-        </div>
-      </header>
+<head>
+  <title>Pain Treatment Plan</title>
+  <meta charset="utf-8" />
+  <meta name="description" content="Pain Treatment Plan" />
+  <meta name="keywords" content="pain treatment, pain management, survey, heart rate, web developement" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <!-- Styling -->
+  <link rel="stylesheet" href="assets/css/reset.css" />
+  <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" />
+  <!-- Jquery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Firebase Core JavaScript Link -->
+  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+  <!-- Specific Firebase products we want (Database) -->
+  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+</head>
 
-      <div class="patient-home-container">
-        <div class="survey-btn-container">
-          <button class="btn" id="survey-btn">
-            <a href="patient-survey.html" class="">Go To Survey</a>
-          </button>
-        </div>
+<body>
+  <div class="page-container">
+    <header>
+      <h1>Pain Treatment Plan</h1>
+      <div class="logo-container">
+        <img id="logo" src="./assets/images/medical-logo.png" alt="" />
       </div>
+    </header>
 
-      <div class="patient-home-pain">
-        <p>Pain Data</p>
+    <div class="patient-home-container">
+      <div class="row">
+        <label for="patient-home-email">Your Email:</label>
+        <input id="patient-home-email" type="text">
       </div>
-
-      <div class="article-container">
-        <p>articles</p>
+      <div class="survey-btn-container">
+        <button class="btn" id="survey-btn">
+          <a href="patient-survey.html" class="">Go To Survey</a>
+        </button>
       </div>
-
-      <footer>
-        <p id="copyright">
-          Copyright &copy;
-          <script>
-            document.write(new Date().getFullYear());
-          </script>
-        </p>
-      </footer>
     </div>
-    <!-- Javascript -->
-    <script type="text/javascript" src="assets/javascript/script.js"></script>
-  </body>
+
+    <div class="patient-home-pain">
+      <p>Pain Data</p>
+    </div>
+
+    <div class="article-container">
+      <p>articles</p>
+    </div>
+
+    <footer>
+      <p id="copyright">
+        Copyright &copy;
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+      </p>
+    </footer>
+  </div>
+  <!-- Javascript -->
+  <script type="text/javascript" src="assets/javascript/dbconfig.js"></script>
+  <script type="text/javascript" src="assets/javascript/patient-key.js"></script>
+</body>
+
 </html>
