@@ -14,4 +14,4 @@ $('#patient-home-btn').on('click', function(event) {
 PATIENTS.on('child_added', function(snapshot) {
   let email = snapshot.child('email').val();
   console.log(email);
-})
+});
