@@ -20,7 +20,9 @@ body {
 }
 
 header {
-  text-align: center;
+  position: relative;
+  display: grid;
+  align-items: center;
   background-color: rgb(
     102,
     179,
@@ -37,18 +39,21 @@ header {
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
 }
 
-.logo-container {
-  float: right;
-  margin: -45px 40px 0px 0px;
+header .logo-container {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  margin-right: 20px;
 }
 
 #logo {
   width: 60px;
 }
 
-h1 {
+header h1 {
   color: white;
-  margin-top: 20px;
+  margin: auto;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: bold;
@@ -56,7 +61,6 @@ h1 {
   text-shadow: (1px 1px 3px rgba(0, 0, 0, 0.2));
   @media screen and (max-width: 640px) {
     font-size: 1em;
-    margin: 25px 0px 0px 0px;
   }
 }
 
@@ -183,52 +187,6 @@ div.add-patient-row {
   filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.2));
 }
 
-#submit-survey-btn {
-  font-size: 0.8em;
-  background-color: rgb(56, 118, 166);
-  color: white;
-  padding: 6px 12px 6px 12px;
-  border-radius: 12px;
-  border-style: none;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-}
-
-#submit-survey-btn:hover {
-  transform: translatey(-1.5px);
-  -webkit-filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.4));
-  filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.2));
-}
-
-#submit-survey-btn:active {
-  transform: translateY(-0.2px);
-  -webkit-filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.4));
-  filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.2));
-}
-
-#patient-home-btn {
-  font-size: 0.8em;
-  background-color: rgb(56, 118, 166);
-  color: white;
-  padding: 6px 12px 6px 12px;
-  border-radius: 12px;
-  border-style: none;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-}
-
-#patient-home-btn:hover {
-  transform: translatey(-1.5px);
-  -webkit-filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.4));
-  filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.2));
-}
-
-#patient-home-btn:active {
-  transform: translateY(-0.2px);
-  -webkit-filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.4));
-  filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.2));
-}
-
 footer {
   background-color: rgb(
     102,
@@ -245,13 +203,107 @@ footer {
   width: 100%;
   bottom: 0;
   left: 0;
-  text-align: center;
+  display: grid;
+  place-items: center;
   box-shadow: 0px -10px 10px rgba(0, 0, 0, 0.5);
 }
 
 #copyright {
   color: white;
   font-size: 0.8em;
-  margin-top: 10px;
   text-shadow: (1px 1px 3px rgba(0, 0, 0, 0.2));
+}
+
+// Patient Home
+.patient-home-container {
+  display: grid;
+  position: relative;
+  width: 100%;
+}
+
+.survey-btn-container {
+  margin: 30px 0px 20px 0px;
+}
+
+#survey-btn {
+  // position: absolute;
+  // top: 50%;
+  // right: 0;
+  // transform: translateY(-50%);
+  // margin-right: 40px;
+  font-size: 1em;
+  padding: 8px 10px 8px 10px;
+}
+
+.patient-home-pain {
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 60%;
+  height: 60vh;
+  border-style: solid;
+  border-color: black;
+  border-width: 0.3px;
+  float: left;
+  margin: 0px 0px 20px 20px;
+}
+
+.article-container {
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 30%;
+  height: 60vh;
+  border-style: solid;
+  border-color: black;
+  border-width: 0.3px;
+  float: right;
+  margin: 0px 20px 20px 20px;
+}
+
+//patient survey
+.survey-container {
+  position: relative;
+  display: grid;
+  align-items: center;
+  margin: 2%;
+  font-weight: bold;
+}
+
+.survey-form {
+  overflow: auto;
+  overflow-y: scroll;
+  margin: 10px 10px 10px 10px;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #ffffff1f;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.24);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.363);
+}
+
+input[type="radio"] {
+  -ms-transform: scale(1); /* IE 9 */
+  -webkit-transform: scale(1); /* Chrome, Safari, Opera */
+  transform: scale(1);
+  margin: 0px 20px 0px 2px;
+}
+
+.time-of-treatment {
+  margin: 0px 0px 30px 20px;
+}
+
+#time-input {
+  background-color: rgba(255, 255, 255, 0);
+  border-style: none;
+}
+
+.survey-container .row {
+  margin-top: 15px;
+}
+
+.row p {
+  margin-bottom: 10px;
 }

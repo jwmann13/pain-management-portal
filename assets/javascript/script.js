@@ -16,15 +16,8 @@
 // var database = firebase.database();
 
 $(document).ready(() => {
-<<<<<<< HEAD
-    $('#submit').on('click', function (event) {
-        event.preventDefault();
-    })
-})
-=======
   $("#submit").on("click", function(event) {
     event.preventDefault();
     console.log(event);
   });
 });
->>>>>>> c35b210c25af4db10acab2df3bd4ea55f0f205ea
