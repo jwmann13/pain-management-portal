@@ -165,7 +165,8 @@ div.add-patient-row {
   margin: 20px 0px 0px 100px;
 }
 
-#add-btn {
+#add-btn,
+#submit-btn {
   font-size: 0.8em;
   background-color: #3876a6;
   color: white;
@@ -176,14 +177,16 @@ div.add-patient-row {
   letter-spacing: 3px;
 }
 
-#add-btn:hover {
+#add-btn:hover,
+#submit-btn:hover {
   -webkit-transform: translatey(-1.5px);
           transform: translatey(-1.5px);
   -webkit-filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.4));
   filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.2));
 }
 
-#add-btn:active {
+#add-btn:active,
+#submit-btn:active {
   -webkit-transform: translateY(-0.2px);
           transform: translateY(-0.2px);
   -webkit-filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.4));

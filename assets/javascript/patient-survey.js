@@ -1,13 +1,34 @@
-$('#submit-survey-btn').on('click', function(event) {
-    event.preventDefault();
+//global variables
+var treatmentTime;
+var painB;
+var painD;
+var painA;
 
-    let treatmentTime = $('#time-input').val();
-    let painB = $('input:radio[name=painScaleBefore]:checked').data('value');
-    let painD = $('input:radio[name=painScaleDuring]:checked').data('value');
-    let painA = $('input:radio[name=painScaleAfter]:checked').data('value');
+//current date
+var today = new Date();
+var dd = String(today.getDate()).padStart(2, "0");
+var mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
+var yyyy = today.getFullYear();
 
-    console.log('time: ', treatmentTime);
-    console.log('pain before:', painB);
-    console.log('pain during:', painD);
-    console.log('pain after:', painA);
-})
+today = mm + "/" + dd + "/" + yyyy;
+
+//clicking submit button after filling out the survey
+
+$("#submit-btn").on("click", function(event) {
+  event.preventDefault();
+
+  treatmentTime = $("#time-input").val();
+  painB = $("input:radio[name=painScaleBefore]:checked").data("value");
+  painD = $("input:radio[name=painScaleDuring]:checked").data("value");
+  painA = $("input:radio[name=painScaleAfter]:checked").data("value");
+
+  var results = {
+    date: today,
+    time: treatmentTime,
+    painBefore: painB,
+    painDuring: painD,
+    painAfter: painA
+  };
+  console.log(results);
+  database.ref().push(results);
+});
