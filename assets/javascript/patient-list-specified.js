@@ -15,7 +15,6 @@
 //   // Variable to reference the database
 //   var database = firebase.database();
 
-const patientList = database.ref('patients')
   
   var patientName;
   var patientAge;
@@ -50,15 +49,15 @@ const patientList = database.ref('patients')
       age: patientAge,
       fitbit: patientFitbit,
       email: patientEmail,
-      sessions: {
+      sessionDate: {
         date: lastRecordedSession
       }
     };
-    database.ref().push(patientObject);
+    PATIENTS.push(patientObject);
   });
   
   // Firebase watcher .on("child_added")
-  database.ref().on(
+  PATIENTS.on(
     "child_added",
     function(snapshot) {
       // storing the snapshot.val() in a variable for convenience
@@ -73,7 +72,7 @@ const patientList = database.ref('patients')
     }
   );
   
-  database.ref().on(
+  PATIENTS.on(
     "child_removed",
     function(snapshot) {
       removePatientRow(snapshot.ref.key);
