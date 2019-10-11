@@ -1,42 +1,47 @@
 <!DOCTYPE html>
 <html lang="en-us">
+  <head>
+    <title>Pain Treatment Survey</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="Pain Treatment Survey" />
+    <meta
+      name="keywords"
+      content="pain treatment, pain management, survey, heart rate, web developement"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Styling -->
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
+    <!-- Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Firebase Core JavaScript Link -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <!-- Specific Firebase products we want (Database) -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+  </head>
 
-<head>
-  <title>Pain Treatment Survey</title>
-  <meta charset="utf-8" />
-  <meta name="description" content="Pain Treatment Survey" />
-  <meta name="keywords" content="pain treatment, pain management, survey, heart rate, web developement" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <!-- Styling -->
-  <link rel="stylesheet" href="assets/css/reset.css" />
-  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
-  <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" />
-  <!-- Jquery -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <!-- Firebase Core JavaScript Link -->
-  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
-  <!-- Specific Firebase products we want (Database) -->
-  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
-</head>
+  <body>
+    <div class="page-container">
+      <header>
+        <h1>Pain Treatment Survey</h1>
+        <div class="logo-container">
+          <img id="logo" src="./assets/images/medical-logo.png" alt="" />
+        </div>
+      </header>
 
-<body>
-  <div class="page-container">
-    <header>
-      <h1>Pain Treatment Survey</h1>
-      <div class="logo-container">
-        <img id="logo" src="./assets/images/medical-logo.png" alt="" />
-      </div>
-    </header>
-
-    <form role="form">
-
-      <div class="row">
-        <label for="time-input">Time of Treatment:</label>
-        <input id="time-input" type="text" />
-      </div>
+      <div class="survey-container">
+        <form class="survey-form" role="form">
+          <div class="row time-of-treatment">
+            <label for="time-input">Time of Treatment:</label>
+            <input id="time-input" type="text" />
+          </div>
 
       <div class="row">
         <p>Pain Level before Treatment</p>
@@ -110,10 +115,12 @@
         <input id="pain-after-10" type="radio" name="painScaleAfter" data-value="10"/>
       </div>
 
-      <div class="add-btn-container">
-        <button id="submit-survey-btn" type="submit">
-          Submit survey
-        </button>
+          <div class="add-btn-container">
+            <button id="add-btn" type="submit">
+              Submit survey
+            </button>
+          </div>
+        </form>
       </div>
       
     </form>
