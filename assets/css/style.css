@@ -276,7 +276,7 @@ footer {
 .article-link {
   color: rgb(52, 52, 199);
   display: block;
-  text-overflow: ellipsis;
+  overflow-wrap: break-word;
 }
 
 .article-link:visited {
