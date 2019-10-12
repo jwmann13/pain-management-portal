@@ -22,8 +22,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Firebase Core JavaScript Link -->
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
-    <!-- Specific Firebase products we want (Database) -->
-    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/7.2.0/firebase-app.js"></script>
+    <!-- Specific Firebase products we want -->
+    <script defer src="/__/firebase/7.2.0/firebase-database.js"></script>
+    <script defer src="/__/firebase/7.2.0/firebase-auth.js"></script>
   </head>
 
   <body>
@@ -35,7 +38,9 @@
         </div>
       </header>
       <div class="btn-container">
-        <button class="btn"><a href="patient-home.html">Patient</a></button>
+        <button onclick="login()" class="btn">
+          <a href="patient-home.html">Patient</a>
+        </button>
         <button class="btn"><a href="provider-home.html">Provider</a></button>
       </div>
       <footer>
@@ -48,5 +53,7 @@
       </footer>
     </div>
     <!-- Javascript -->
+    <script src="./assets/javascript/dbconfig.js"></script>
+    <script src="./assets/javascript/login.js"></script>
   </body>
 </html>

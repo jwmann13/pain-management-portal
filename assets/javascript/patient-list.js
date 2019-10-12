@@ -34,8 +34,8 @@ $("#add-btn").on("click", function(event) {
     sessions: {
       date: lastRecordedSession
     }
-    database.ref().push(patientObject);
   };
+  PATIENTS.push(patientObject);
 });
 
 // Firebase watcher .on("child_added")
@@ -46,6 +46,7 @@ PATIENTS.on(
     var sv = snapshot.val();
 
     addPatientRow(sv, snapshot.ref.key);
+    var patientId = snapshot.ref.key;
 
     // Handle the errors
   },
@@ -77,10 +78,7 @@ function addPatientRow(element, uniqueID) {
 }
 
 function removePatientFromDatabase(uniqueID) {
-  database
-    .ref()
-    .child(uniqueID)
-    .remove();
+  PATIENTS.child(uniqueID).remove();
 }
 
 function removePatientRow(uniqueID) {
