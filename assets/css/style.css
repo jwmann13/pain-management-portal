@@ -252,6 +252,43 @@ footer {
   border-width: 0.3px;
   float: right;
   margin: 0px 20px 20px 20px;
+  overflow: scroll;
+}
+
+.results {
+  margin: 10px;
+  border-bottom: 2px solid rgb(43,131,187);
+  padding: 5px;
+}
+
+.results:hover {
+  background-color: rgb(228, 228, 228);
+}
+
+.article-title {
+  margin-bottom: 5px;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+}
+
+.article-snippet {
+  font-family: "Lato", sans-serif;
+  margin-bottom: 5px;
+}
+
+.article-link {
+  color: rgb(52, 52, 199);
+  display: block;
+  overflow-wrap: break-word;
+}
+
+.article-link:visited {
+  color: rgb(84, 178, 209);
+  text-decoration: underline;
+}
+
+.article-link:hover {
+  color: purple;
 }
 
 .survey-container {
