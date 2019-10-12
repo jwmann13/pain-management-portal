@@ -12,6 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <!-- Styling -->
     <link rel="stylesheet" href="assets/css/reset.css" />
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
     <!-- Google Fonts -->
     <link
@@ -35,16 +36,107 @@
         </div>
       </header>
 
-      <footer>
-        <p id="copyright">
-          Copyright &copy;
-          <script>
-            document.write(new Date().getFullYear());
-          </script>
-        </p>
-      </footer>
-    </div>
-    <!-- Javascript -->
-    <script type="text/javascript" src="assets/javascript/script.js"></script>
-  </body>
+      <div class="survey-container">
+        <form class="survey-form" role="form">
+          <div class="row time-of-treatment">
+            <label for="time-input">Time of Treatment:</label>
+            <input id="time-input" type="text" />
+          </div>
+
+      <div class="row">
+        <p>Pain Level before Treatment</p>
+        <label for="pain-before-1">1</label>
+        <input id="pain-before-1" type="radio" name="painScaleBefore" data-value="1"/>
+        <label for="pain-before-2">2</label>
+        <input id="pain-before-2" type="radio" name="painScaleBefore" data-value="2"/>
+        <label for="pain-before-3">3</label>
+        <input id="pain-before-3" type="radio" name="painScaleBefore" data-value="3"/>
+        <label for="pain-before-4">4</label>
+        <input id="pain-before-4" type="radio" name="painScaleBefore" data-value="4"/>
+        <label for="pain-before-5">5</label>
+        <input id="pain-before-5" type="radio" name="painScaleBefore" data-value="5"/>
+        <label for="pain-before-6">6</label>
+        <input id="pain-before-6" type="radio" name="painScaleBefore" data-value="6"/>
+        <label for="pain-before-7">7</label>
+        <input id="pain-before-7" type="radio" name="painScaleBefore" data-value="7"/>
+        <label for="pain-before-8">8</label>
+        <input id="pain-before-8" type="radio" name="painScaleBefore" data-value="8"/>
+        <label for="pain-before-9">9</label>
+        <input id="pain-before-9" type="radio" name="painScaleBefore" data-value="9"/>
+        <label for="pain-before-10">10</label>
+        <input id="pain-before-10" type="radio" name="painScaleBefore" data-value="10"/>
+      </div>
+
+      <div class="row">
+        <p>Pain Level during Treatment</p>
+        <label for="pain-during-1">1</label>
+        <input id="pain-during-1" type="radio" name="painScaleDuring" data-value="1"/>
+        <label for="pain-during-2">2</label>
+        <input id="pain-during-2" type="radio" name="painScaleDuring" data-value="2"/>
+        <label for="pain-during-3">3</label>
+        <input id="pain-during-3" type="radio" name="painScaleDuring" data-value="3"/>
+        <label for="pain-during-4">4</label>
+        <input id="pain-during-4" type="radio" name="painScaleDuring" data-value="4"/>
+        <label for="pain-during-5">5</label>
+        <input id="pain-during-5" type="radio" name="painScaleDuring" data-value="5"/>
+        <label for="pain-during-6">6</label>
+        <input id="pain-during-6" type="radio" name="painScaleDuring" data-value="6"/>
+        <label for="pain-during-7">7</label>
+        <input id="pain-during-7" type="radio" name="painScaleDuring" data-value="7"/>
+        <label for="pain-during-8">8</label>
+        <input id="pain-during-8" type="radio" name="painScaleDuring" data-value="8"/>
+        <label for="pain-during-9">9</label>
+        <input id="pain-during-9" type="radio" name="painScaleDuring" data-value="9"/>
+        <label for="pain-during-10">10</label>
+        <input id="pain-during-10" type="radio" name="painScaleDuring" data-value="10"/>
+      </div>
+
+      <div class="row">
+        <p>Pain Level after Treatment</p>
+        <label for="pain-after-1">1</label>
+        <input id="pain-after-1" type="radio" name="painScaleAfter" data-value="1"/>
+        <label for="pain-after-2">2</label>
+        <input id="pain-after-2" type="radio" name="painScaleAfter" data-value="2"/>
+        <label for="pain-after-3">3</label>
+        <input id="pain-after-3" type="radio" name="painScaleAfter" data-value="3"/>
+        <label for="pain-after-4">4</label>
+        <input id="pain-after-4" type="radio" name="painScaleAfter" data-value="4"/>
+        <label for="pain-after-5">5</label>
+        <input id="pain-after-5" type="radio" name="painScaleAfter" data-value="5"/>
+        <label for="pain-after-6">6</label>
+        <input id="pain-after-6" type="radio" name="painScaleAfter" data-value="6"/>
+        <label for="pain-after-7">7</label>
+        <input id="pain-after-7" type="radio" name="painScaleAfter" data-value="7"/>
+        <label for="pain-after-8">8</label>
+        <input id="pain-after-8" type="radio" name="painScaleAfter" data-value="8"/>
+        <label for="pain-after-9">9</label>
+        <input id="pain-after-9" type="radio" name="painScaleAfter" data-value="9"/>
+        <label for="pain-after-10">10</label>
+        <input id="pain-after-10" type="radio" name="painScaleAfter" data-value="10"/>
+      </div>
+
+          <div class="add-btn-container">
+            <button id="add-btn" type="submit">
+              Submit survey
+            </button>
+          </div>
+        </form>
+      </div>
+      
+    </form>
+
+    <footer>
+      <p id="copyright">
+        Copyright &copy;
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+      </p>
+    </footer>
+  </div>
+  <!-- Javascript -->
+  <script type="text/javascript" src="assets/javascript/dbconfig.js"></script>
+  <script src="assets/javascript/patient-survey.js"></script>
+</body>
+
 </html>

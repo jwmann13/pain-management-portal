@@ -18,7 +18,12 @@ body {
 }
 
 header {
-  text-align: center;
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #66b3f0;
   /* For browsers that do not support gradients */
   background-image: -webkit-gradient(linear, left top, right top, from(#66b3f0), to(#0c3c60));
@@ -30,18 +35,22 @@ header {
           box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
 }
 
-.logo-container {
-  float: right;
-  margin: -45px 40px 0px 0px;
+header .logo-container {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  margin-right: 20px;
 }
 
 #logo {
   width: 60px;
 }
 
-h1 {
+header h1 {
   color: white;
-  margin-top: 20px;
+  margin: auto;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: bold;
@@ -50,9 +59,8 @@ h1 {
 }
 
 @media screen and (max-width: 640px) {
-  h1 {
+  header h1 {
     font-size: 1em;
-    margin: 25px 0px 0px 0px;
   }
 }
 
@@ -99,7 +107,7 @@ a {
   filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.2));
 }
 
-table {
+#patient-table {
   margin: 30px 0px 0px 5%;
   border-collapse: collapse;
   width: 90%;
@@ -124,24 +132,32 @@ tr:hover {
   cursor: pointer;
 }
 
-form {
+.add-patient-form {
   margin: 50px 0px 0px 0px;
   float: right;
 }
 
-label {
+#name-label,
+#age-label,
+#email-label,
+#fitbit-label,
+#session-label {
   display: table-cell;
   text-align: right;
 }
 
-input {
+#name-input,
+#age-input,
+#email-input,
+#fitbit-input,
+#session-input {
   display: table-cell;
   margin: 5px 0px 0px 10px;
   width: 60%;
   text-align: center;
 }
 
-div.row {
+div.add-patient-row {
   display: table-row;
 }
 
@@ -184,7 +200,9 @@ footer {
   width: 100%;
   bottom: 0;
   left: 0;
-  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
   -webkit-box-shadow: 0px -10px 10px rgba(0, 0, 0, 0.5);
           box-shadow: 0px -10px 10px rgba(0, 0, 0, 0.5);
 }
@@ -192,7 +210,137 @@ footer {
 #copyright {
   color: white;
   font-size: 0.8em;
-  margin-top: 10px;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.patient-home-container {
+  display: -ms-grid;
+  display: grid;
+  position: relative;
+  width: 100%;
+}
+
+.survey-btn-container {
+  margin: 30px 0px 20px 0px;
+}
+
+#survey-btn {
+  font-size: 1em;
+  padding: 8px 10px 8px 10px;
+}
+
+.patient-home-pain {
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 60%;
+  height: 60vh;
+  border-style: solid;
+  border-color: black;
+  border-width: 0.3px;
+  float: left;
+  margin: 0px 0px 20px 20px;
+}
+
+.article-container {
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 30%;
+  height: 60vh;
+  border-style: solid;
+  border-color: black;
+  border-width: 0.3px;
+  float: right;
+  margin: 0px 20px 20px 20px;
+  overflow: scroll;
+}
+
+.results {
+  margin: 10px;
+  border-bottom: 2px solid rgb(43,131,187);
+  padding: 5px;
+}
+
+.results:hover {
+  background-color: rgb(228, 228, 228);
+}
+
+.article-title {
+  margin-bottom: 5px;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+}
+
+.article-snippet {
+  font-family: "Lato", sans-serif;
+  margin-bottom: 5px;
+}
+
+.article-link {
+  color: rgb(52, 52, 199);
+}
+
+.article-link:visited {
+  color: rgb(84, 178, 209);
+  text-decoration: underline;
+}
+
+.article-link:hover {
+  color: purple;
+}
+
+.survey-container {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2%;
+  font-weight: bold;
+}
+
+.survey-form {
+  overflow: auto;
+  overflow-y: scroll;
+  margin: 10px 10px 10px 10px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff1f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.24);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.363);
+}
+
+input[type="radio"] {
+  /* IE 9 */
+  -webkit-transform: scale(1);
+  /* Chrome, Safari, Opera */
+  transform: scale(1);
+  margin: 0px 20px 0px 2px;
+}
+
+.time-of-treatment {
+  margin: 0px 0px 30px 20px;
+}
+
+#time-input {
+  background-color: rgba(255, 255, 255, 0);
+  border-style: none;
+}
+
+.survey-container .row {
+  margin-top: 15px;
+}
+
+.row p {
+  margin-bottom: 10px;
 }
 /*# sourceMappingURL=style.css.map */
