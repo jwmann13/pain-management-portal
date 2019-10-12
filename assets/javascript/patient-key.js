@@ -1,17 +1,20 @@
-$('#patient-home-btn').on('click', function(event) {
-    event.preventDefault();
+let patientKey;
 
-    let email = $('#patient-home-email').val().trim();
+$('#patient-auth-btn').on('click', function (event) {
+  event.preventDefault();
 
-    PATIENTS.orderByChild('email').equalTo(email).on('value', function(snapshot) {
-      console.log(snapshot.val());
-      var key = Object.keys(snapshot.val())[0];
-      console.log(key);
-    })
-    // console.log($('#patient-home-email').val().trim());
+  let email = $('#patient-auth-email').val().trim();
+
+  PATIENTS.orderByChild('email').equalTo(email).on('value', function (snapshot) {
+    patientKey = Object.keys(snapshot.val())[0];
+    console.log(snapshot.val());
+    console.log(patientKey);
+  });
 });
 
-PATIENTS.on('child_added', function(snapshot) {
-  let email = snapshot.child('email').val();
-  console.log(email);
-});
+function authenticatePatientByEmail(email) {
+
+  PATIENTS.orderByChild('email').equalTo(email).on('value', function (snapshot) {
+    return Object.keys(snapshot.val())[0];
+  });
+}

@@ -23,6 +23,7 @@ $("#submit-btn").on("click", function(event) {
   painA = $("input:radio[name=painScaleAfter]:checked").data("value");
 
   var results = {
+    patientID: patientKey,
     date: today,
     time: treatmentTime,
     painBefore: painB,
@@ -30,5 +31,5 @@ $("#submit-btn").on("click", function(event) {
     painAfter: painA
   };
   console.log(results);
-  database.ref().push(results);
+  SESSIONS.push(results);
 });
