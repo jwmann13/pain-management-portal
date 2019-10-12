@@ -5,16 +5,12 @@ $('#patient-home-btn').on('click', function(event) {
 
     let email = $('#patient-home-email').val().trim();
 
-    PATIENTS.orderByChild('email').equalTo(email).on('value', function(snapshot) {
-      // console.log(snapshot.val());
-      patientKey = Object.keys(snapshot.val())[0];
-
-      // console.log(key);
-    })
-    // console.log($('#patient-home-email').val().trim());
+    patientKey = authenticatePatientByEmail(email);
 });
 
-PATIENTS.on('child_added', function(snapshot) {
-  let email = snapshot.child('email').val();
-  console.log(email);
-});
+function authenticatePatientByEmail(email) {
+
+  PATIENTS.orderByChild('email').equalTo(email).on('value', function(snapshot) {
+    return Object.keys(snapshot.val())[0];
+  });
+}
