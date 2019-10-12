@@ -34,8 +34,9 @@ $("#add-btn").on("click", function(event) {
     sessions: {
       date: lastRecordedSession
     }
-    database.ref().push(patientObject);
   };
+
+  PATIENTS.push(patientObject);
 });
 
 // Firebase watcher .on("child_added")
