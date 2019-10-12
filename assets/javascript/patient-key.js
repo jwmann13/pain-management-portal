@@ -1,9 +1,9 @@
 let patientKey;
 
-$('#patient-home-btn').on('click', function (event) {
+$('#patient-auth-btn').on('click', function (event) {
   event.preventDefault();
 
-  let email = $('#patient-home-email').val().trim();
+  let email = $('#patient-auth-email').val().trim();
 
   PATIENTS.orderByChild('email').equalTo(email).on('value', function (snapshot) {
     patientKey = Object.keys(snapshot.val())[0];
