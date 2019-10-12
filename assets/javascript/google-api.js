@@ -27,7 +27,7 @@ $.ajax({
         $(".article-container").append(`<div class="container results" id="${artResults.id}">
         <h2 class="article-title">${artResults.title}</h2>
         <p class="article-snippet">${artResults.snippet}</p>
-        <a href="${artResults.link}" class="article-link" target="_blank">${artResults.link}</a>
+        <a href="${artResults.link}" class="article-link" target="_blank">Read More</a>
         </div>`);
         
     };
