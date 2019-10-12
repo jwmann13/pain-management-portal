@@ -94,8 +94,8 @@ a {
 }
 
 .btn:hover {
-  -webkit-transform: translatey(-1.5px);
-          transform: translatey(-1.5px);
+  -webkit-transform: translateY(-1.5px);
+          transform: translateY(-1.5px);
   -webkit-filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.4));
   filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.2));
 }
@@ -193,6 +193,22 @@ div.add-patient-row {
   filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.2));
 }
 
+.auth-email-input {
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 48%;
+  left: 50%;
+}
+
+.auth-btn-container {
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 53%;
+  left: 50%;
+}
+
 footer {
   background-color: #66b3f0;
   /* For browsers that do not support gradients */
@@ -252,43 +268,6 @@ footer {
   border-width: 0.3px;
   float: right;
   margin: 0px 20px 20px 20px;
-  overflow: scroll;
-}
-
-.results {
-  margin: 10px;
-  border-bottom: 2px solid rgb(43,131,187);
-  padding: 5px;
-}
-
-.results:hover {
-  background-color: rgb(228, 228, 228);
-}
-
-.article-title {
-  margin-bottom: 5px;
-  font-family: "Lato", sans-serif;
-  font-weight: bold;
-}
-
-.article-snippet {
-  font-family: "Lato", sans-serif;
-  margin-bottom: 5px;
-}
-
-.article-link {
-  color: rgb(52, 52, 199);
-  display: block;
-  overflow-wrap: break-word;
-}
-
-.article-link:visited {
-  color: rgb(84, 178, 209);
-  text-decoration: underline;
-}
-
-.article-link:hover {
-  color: purple;
 }
 
 .survey-container {
