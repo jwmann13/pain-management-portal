@@ -174,7 +174,7 @@ div.add-patient-row {
 
 #add-btn:hover,
 #submit-btn:hover {
-  transform: translatey(-1.5px);
+  transform: translateY(-1.5px);
   -webkit-filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.4));
   filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.2));
 }
@@ -184,20 +184,6 @@ div.add-patient-row {
   transform: translateY(-0.2px);
   -webkit-filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.4));
   filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.2));
-}
-
-.auth-email-input{
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 46%;
-  left: 50%;
-}
-
-.auth-btn-container{
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 53%;
-  left: 50%;
 }
 
 footer {
@@ -225,6 +211,21 @@ footer {
   color: white;
   font-size: 0.8em;
   text-shadow: (1px 1px 3px rgba(0, 0, 0, 0.2));
+}
+
+// Patient Authentication
+.auth-email-input{
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 46%;
+  left: 50%;
+}
+
+.auth-btn-container{
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 53%;
+  left: 50%;
 }
 
 // Patient Home
