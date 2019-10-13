@@ -32,4 +32,9 @@ $("#submit-btn").on("click", function(event) {
   };
   console.log(results);
   SESSIONS.push(results);
+  SESSIONS.on('child_added', (snapshot) => {
+    PATIENTS.child(patientKey + '/sessions').update({
+      sessions: snapshot.key
+    })
+  })
 });

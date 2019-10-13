@@ -6,9 +6,14 @@ $('#patient-auth-btn').on('click', function (event) {
   let email = $('#patient-auth-email').val().trim();
 
   PATIENTS.orderByChild('email').equalTo(email).on('value', function (snapshot) {
-    return Object.keys(snapshot.val())[0];
+    let patientKey = Object.keys(snapshot.val())[0];
     // console.log(snapshot.val());
-    // console.log(patientKey);
+    console.log(patientKey);
+    let pastSessions = PATIENTS.child(patientKey + '/sessions')
+    console.log(pastSessions);
+    // PATIENTS.child(patientKey).update({
+    //   sessions: pastSessions.push()
+    // });
   });
 });
 
@@ -19,8 +24,9 @@ function authenticatePatientByEmail(email) {
   });
 }
 
-function writeUserSurveysToHome(patientKey){
-  let table = $('<table>');
-  table.append()
-  $('.patient-past-surveys')
+function writeUserSurveysToHome(element, patientKey) {
+  let table = $('.past-surveys');
+  table.append($(
+    `<tr><td></td><td></td></tr>`
+  ));
 }
