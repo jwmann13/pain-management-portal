@@ -270,6 +270,42 @@ footer {
   margin: 0px 20px 20px 20px;
 }
 
+.results {
+  margin: 10px;
+  border-bottom: 2px solid #2b83bb;
+  padding: 5px;
+}
+
+.results:hover {
+  background-color: #e4e4e4;
+}
+
+.article-title {
+  margin-bottom: 5px;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+}
+
+.article-snippet {
+  font-family: "Lato", sans-serif;
+  margin-bottom: 5px;
+}
+
+.article-link {
+  color: #3434c7;
+  display: block;
+  overflow-wrap: break-word;
+}
+
+.article-link:visited {
+  color: #54b2d1;
+  text-decoration: underline;
+}
+
+.article-link:hover {
+  color: purple;
+}
+
 .survey-container {
   position: relative;
   display: -ms-grid;
