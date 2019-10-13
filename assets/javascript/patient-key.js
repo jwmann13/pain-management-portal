@@ -5,10 +5,10 @@ $('#patient-auth-btn').on('click', function (event) {
 
   let email = $('#patient-auth-email').val().trim();
 
-  PATIENTS.orderByChild('email').equalTo(email).on('value', function (snapshot) {
-    patientKey = Object.keys(snapshot.val())[0];
-    console.log(snapshot.val());
-    console.log(patientKey);
+  patientKey = PATIENTS.orderByChild('email').equalTo(email).on('value', function (snapshot) {
+    return Object.keys(snapshot.val())[0];
+    // console.log(snapshot.val());
+    // console.log(patientKey);
   });
 });
 
