@@ -48,7 +48,7 @@ header .logo-container {
   width: 60px;
 }
 
-header h1 {
+h1 {
   color: white;
   margin: auto;
   text-transform: uppercase;
@@ -60,7 +60,7 @@ header h1 {
 }
 
 @media screen and (max-width: 640px) {
-  header h1 {
+  h1 {
     font-size: 1em;
   }
 }
@@ -259,6 +259,10 @@ footer {
   padding: 5px;
 }
 
+.patient-home-pain p {
+  line-height: 2em;
+}
+
 .article-container {
   background-color: rgba(255, 255, 255, 0.7);
   width: 30%;
@@ -269,8 +273,43 @@ footer {
   float: right;
   overflow: auto;
   overflow-y: scroll;
-  margin: 10px 30px 10px 0px;
+  margin: 10px 30px 10px 10px;
+}
+
+.results {
+  margin: 10px;
+  border-bottom: 2px solid #2b83bb;
   padding: 5px;
+}
+
+.results:hover {
+  background-color: #e4e4e4;
+}
+
+.article-title {
+  margin-bottom: 5px;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+}
+
+.article-snippet {
+  font-family: "Lato", sans-serif;
+  margin-bottom: 5px;
+}
+
+.article-link {
+  color: #3434c7;
+  display: block;
+  overflow-wrap: break-word;
+}
+
+.article-link:visited {
+  color: #54b2d1;
+  text-decoration: underline;
+}
+
+.article-link:hover {
+  color: purple;
 }
 
 .survey-container {
