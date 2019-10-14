@@ -31,9 +31,7 @@ $("#add-btn").on("click", function(event) {
     age: patientAge,
     fitbit: patientFitbit,
     email: patientEmail,
-    sessions: {
-      date: lastRecordedSession
-    }
+    lastSession: lastRecordedSession
   };
 
   PATIENTS.push(patientObject);
@@ -71,17 +69,14 @@ function addPatientRow(element, uniqueID) {
   const tableBody = document.getElementById("tableData");
   let dataHtml = `<tr id=${uniqueID}>
             <td><a href="provider-patient-info.html">${element.patient}</a></td>
-            <td><a href="provider-patient-info.html">${element.sessions.date}</a></td>
+            <td><a href="provider-patient-info.html">${element.lastSession}</a></td>
           <td><a onclick="removePatientFromDatabase('${uniqueID}');">X</a></td>
         </tr>`;
   tableBody.innerHTML += dataHtml;
 }
 
 function removePatientFromDatabase(uniqueID) {
-  database
-    .ref()
-    .child(uniqueID)
-    .remove();
+  PATIENTS.child(uniqueID).remove();
 }
 
 function removePatientRow(uniqueID) {

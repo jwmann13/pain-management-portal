@@ -91,7 +91,7 @@ a {
 }
 
 .btn:hover {
-  transform: translatey(-1.5px);
+  transform: translateY(-1.5px);
   -webkit-filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.4));
   filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.2));
 }
@@ -156,10 +156,6 @@ div.add-patient-row {
   display: table-row;
 }
 
-// div.row {
-//   display: table-row;
-// }
-
 .add-btn-container {
   margin: 20px 0px 0px 100px;
 }
@@ -178,7 +174,7 @@ div.add-patient-row {
 
 #add-btn:hover,
 #submit-btn:hover {
-  transform: translatey(-1.5px);
+  transform: translateY(-1.5px);
   -webkit-filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.4));
   filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.2));
 }
@@ -215,6 +211,21 @@ footer {
   color: white;
   font-size: 0.8em;
   text-shadow: (1px 1px 3px rgba(0, 0, 0, 0.2));
+}
+
+// Patient Authentication
+.auth-email-input{
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 46%;
+  left: 50%;
+}
+
+.auth-btn-container{
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 53%;
+  left: 50%;
 }
 
 // Patient Home
@@ -258,6 +269,42 @@ footer {
   border-width: 0.3px;
   float: right;
   margin: 0px 20px 20px 20px;
+}
+
+.results {
+  margin: 10px;
+  border-bottom: 2px solid rgb(43,131,187);
+  padding: 5px;
+}
+
+.results:hover {
+  background-color: rgb(228, 228, 228);
+}
+
+.article-title {
+  margin-bottom: 5px;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+}
+
+.article-snippet {
+  font-family: "Lato", sans-serif;
+  margin-bottom: 5px;
+}
+
+.article-link {
+  color: rgb(52, 52, 199);
+  display: block;
+  overflow-wrap: break-word;
+}
+
+.article-link:visited {
+  color: rgb(84, 178, 209);
+  text-decoration: underline;
+}
+
+.article-link:hover {
+  color: purple;
 }
 
 //patient survey
