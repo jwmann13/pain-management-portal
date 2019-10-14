@@ -22,15 +22,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <!--🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥 FIREBASE 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥 -->
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/7.2.0/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/7.2.0/firebase-auth.js"></script>
-    <script defer src="/__/firebase/7.2.0/firebase-database.js"></script>
-    <!-- <script defer src="/__/firebase/7.2.0/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/7.2.0/firebase-storage.js"></script> -->
-    <!-- initialize the SDK after all desired features are loaded -->
-    <script defer src="/__/firebase/init.js"></script>
+    <!-- Firebase Core JavaScript Link -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-app.js"></script>
+    <!-- Specific Firebase products we want -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-database.js"></script>
   </head>
 
   <body>
@@ -43,9 +38,7 @@
         </div>
       </header>
       <div class="btn-container">
-        <button onclick="login()" class="btn">
-          <a>Patient</a>
-        </button>
+        <button class="btn"><a href="patient-auth.html">Patient</a></button>
         <button class="btn"><a href="provider-home.html">Provider</a></button>
       </div>
       <footer>
@@ -59,6 +52,5 @@
     </div>
     <!-- Javascript -->
     <script src="./assets/javascript/dbconfig.js"></script>
-    <script src="./assets/javascript/login.js"></script>
   </body>
 </html>

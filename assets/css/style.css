@@ -221,8 +221,9 @@ footer {
   position: absolute;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  top: 46%;
+  top: 40%;
   left: 50%;
+  font-size: 2em;
 }
 
 .auth-btn-container {
@@ -231,6 +232,10 @@ footer {
           transform: translate(-50%, -50%);
   top: 53%;
   left: 50%;
+}
+
+#patient-auth-btn {
+  font-size: 2em;
 }
 
 .patient-home-container {
@@ -260,7 +265,13 @@ footer {
   overflow: auto;
   overflow-y: scroll;
   margin: 10px 0px 10px 30px;
-  padding: 5px;
+  padding: 5px 5px 5px 20px;
+  font-size: 1.5em;
+}
+
+.patient-home-pain img {
+  margin-left: 10px;
+  margin-bottom: 6px;
 }
 
 .patient-home-pain p {
