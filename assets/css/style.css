@@ -56,6 +56,7 @@ header h1 {
   font-weight: bold;
   font-size: 1.5em;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
 @media screen and (max-width: 640px) {
@@ -216,6 +217,18 @@ footer {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
+.patient-login-container {
+  text-align: center;
+}
+
+.patient-login {
+  margin-top: 100px;
+}
+
+#patient-auth-email {
+  margin: 10px 0px 20px 5px;
+}
+
 .patient-home-container {
   display: -ms-grid;
   display: grid;
@@ -240,7 +253,10 @@ footer {
   border-color: black;
   border-width: 0.3px;
   float: left;
-  margin: 0px 0px 20px 20px;
+  overflow: auto;
+  overflow-y: scroll;
+  margin: 10px 0px 10px 30px;
+  padding: 5px;
 }
 
 .article-container {
@@ -251,44 +267,10 @@ footer {
   border-color: black;
   border-width: 0.3px;
   float: right;
-  margin: 0px 20px 20px 20px;
-  overflow: scroll;
-}
-
-.results {
-  margin: 10px;
-  border-bottom: 2px solid rgb(43,131,187);
+  overflow: auto;
+  overflow-y: scroll;
+  margin: 10px 30px 10px 0px;
   padding: 5px;
-}
-
-.results:hover {
-  background-color: rgb(228, 228, 228);
-}
-
-.article-title {
-  margin-bottom: 5px;
-  font-family: "Lato", sans-serif;
-  font-weight: bold;
-}
-
-.article-snippet {
-  font-family: "Lato", sans-serif;
-  margin-bottom: 5px;
-}
-
-.article-link {
-  color: rgb(52, 52, 199);
-  display: block;
-  overflow-wrap: break-word;
-}
-
-.article-link:visited {
-  color: rgb(84, 178, 209);
-  text-decoration: underline;
-}
-
-.article-link:hover {
-  color: purple;
 }
 
 .survey-container {
@@ -317,11 +299,11 @@ footer {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.24);
+  background: #66b3f0;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.363);
+  background: #59a3df;
 }
 
 input[type="radio"] {

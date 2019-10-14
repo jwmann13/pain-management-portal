@@ -59,6 +59,7 @@ header h1 {
   font-weight: bold;
   font-size: 1.5em;
   text-shadow: (1px 1px 3px rgba(0, 0, 0, 0.2));
+  cursor: pointer;
   @media screen and (max-width: 640px) {
     font-size: 1em;
   }
@@ -156,10 +157,6 @@ div.add-patient-row {
   display: table-row;
 }
 
-// div.row {
-//   display: table-row;
-// }
-
 .add-btn-container {
   margin: 20px 0px 0px 100px;
 }
@@ -217,6 +214,19 @@ footer {
   text-shadow: (1px 1px 3px rgba(0, 0, 0, 0.2));
 }
 
+//patient Login
+.patient-login-container {
+  text-align: center;
+}
+
+.patient-login {
+  margin-top: 100px;
+}
+
+#patient-auth-email {
+  margin: 10px 0px 20px 5px;
+}
+
 // Patient Home
 .patient-home-container {
   display: grid;
@@ -229,11 +239,6 @@ footer {
 }
 
 #survey-btn {
-  // position: absolute;
-  // top: 50%;
-  // right: 0;
-  // transform: translateY(-50%);
-  // margin-right: 40px;
   font-size: 1em;
   padding: 8px 10px 8px 10px;
 }
@@ -246,7 +251,10 @@ footer {
   border-color: black;
   border-width: 0.3px;
   float: left;
-  margin: 0px 0px 20px 20px;
+  overflow: auto;
+  overflow-y: scroll;
+  margin: 10px 0px 10px 30px;
+  padding: 5px;
 }
 
 .article-container {
@@ -257,7 +265,10 @@ footer {
   border-color: black;
   border-width: 0.3px;
   float: right;
-  margin: 0px 20px 20px 20px;
+  overflow: auto;
+  overflow-y: scroll;
+  margin: 10px 30px 10px 0px;
+  padding: 5px;
 }
 
 //patient survey
@@ -281,10 +292,10 @@ footer {
   background: #ffffff1f;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.24);
+  background: rgb(102, 179, 240);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.363);
+  background: rgb(89, 163, 223);
 }
 
 input[type="radio"] {
