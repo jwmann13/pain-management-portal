@@ -13,5 +13,5 @@ function login() {
       const user = result.user;
       document.write("Hello ${user.displayName}");
     })
-    .catch(consol.log);
+    .catch(console.log);
 }

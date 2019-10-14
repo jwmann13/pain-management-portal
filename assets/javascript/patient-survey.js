@@ -12,12 +12,9 @@ var yyyy = today.getFullYear();
 
 today = mm + "/" + dd + "/" + yyyy;
 
-$('#patient-home-button').on('click', function(event) {
+$("#patient-home-button").on("click", function(event) {
   event.preventDefault();
-
-  
-
-})
+});
 
 //clicking submit button after filling out the survey
 
@@ -37,9 +34,21 @@ $("#submit-btn").on("click", function(event) {
   };
   console.log(results);
   SESSIONS.update(results);
-  SESSIONS.on('child_added', (snapshot) => {
-    PATIENTS.child(patientKey + '/sessions').update({
+  SESSIONS.on("child_added", snapshot => {
+    PATIENTS.child(patientKey + "/sessions").update({
       sessions: snapshot.key
-    })
-  })
+    });
+  });
 });
+
+var patientlist;
+
+PATIENTS.on(
+  "value",
+  function(snapshot) {
+    patientList = snapshot.val();
+  },
+  function(errorObject) {
+    console.log("The read failed: " + errorObject.code);
+  }
+);
