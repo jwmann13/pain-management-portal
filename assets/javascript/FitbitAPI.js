@@ -11,8 +11,9 @@ var userId = '7T2329';
 console.log(access_token);
 console.log(userId);
 
+
 var xhr = new XMLHttpRequest();
-xhr.open('GET', 'https://api.fitbit.com/1/user/' + userId + '/activities/heart/date/today/1w.json');
+xhr.open('GET', 'https://api.fitbit.com/1/user/' + userId + '/activities/heart/date/today/1d.json');
 xhr.setRequestHeader("Authorization", 'Bearer ' + access_token);
 xhr.onload = function () {
     if (xhr.status === 200) {
@@ -20,15 +21,52 @@ xhr.onload = function () {
         console.log(xhr.responseText)
         // created a new variable from the response object
         let response = xhr.responseText
+
+        let result = JSON.parse(xhr.response);
         // gradded the targeted div 
-        let target = $(".patient-home-pain") 
+        let target = $(".patient-home-pain")
         // created new p tag 
-        let p  = $('<p>')
+        let p = $('<p>')
         // appended the response data to the p tag
         p.append(response)
         // appended the p to the html
         target.append(p)
-
+        console.log(result);
+        console.log(result['activities-heart']);
+        for (var i = 0; i < result['activities-heart'].length; i++) {
+            var results = result['activities-heart'][i]
+            var heartResults = {
+                dateTime: results.dateTime,
+            }
+        }
+        $(".patient-home-pain").append("<div>${result['activities-heart']}</div>");
     }
 };
 xhr.send()
+
+
+// var xhr = new XMLHttpRequest();
+// xhr.open('GET', 'https://api.fitbit.com/1/user/' + userId + '/activities/heart/date/today/1d.json');
+// xhr.setRequestHeader("Authorization", 'Bearer ' + access_token);
+// xhr.onload = function () {
+//     if (xhr.status === 200) {
+//         // JSON.stringify(xhr.responseText)
+//         console.log(xhr.responseText)
+//         // created a new variable from the response object
+//         let response = xhr.responseText
+//         // gradded the targeted div 
+//         let jsonResponse = JSON.parse(response)
+//         let heartRate = jsonResponse['activities-heart'][0].value
+//         let key = heartRate
+//         console.log(heartRate)
+//         let target = $(".patient-home-pain") 
+//         // created new p tag 
+//         let p  = $('<p>')
+//         // appended the response data to the p tag
+//         p.append(jsonResponse)
+//         // appended the p to the html
+//         target.append(p)
+
+//     }
+// };
+// xhr.send()
