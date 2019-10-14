@@ -1,19 +1,27 @@
-// let patientKey;
-
 $('#patient-auth-btn').on('click', function (event) {
   event.preventDefault();
 
   let email = $('#patient-auth-email').val().trim();
+  var today = new Date();
+  var dd = String(today.getDate()).padStart(2, "0");
+  var mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
+  var yyyy = today.getFullYear();
+  today = mm + "/" + dd + "/" + yyyy;
 
   PATIENTS.orderByChild('email').equalTo(email).on('value', function (snapshot) {
     let patientKey = Object.keys(snapshot.val())[0];
-    // console.log(snapshot.val());
-    console.log(patientKey);
+
+
+    let sessionInfo = {
+      patient: patientKey,
+      date: today
+    }
+    SESSIONS.push(sessionInfo);
+
     let pastSessions = PATIENTS.child(patientKey + '/sessions')
-    console.log(pastSessions);
-    // PATIENTS.child(patientKey).update({
-    //   sessions: pastSessions.push()
-    // });
+    PATIENTS.child(patientKey).update({
+      sessionsKeys: pastSessions
+    });
   });
 });
 
