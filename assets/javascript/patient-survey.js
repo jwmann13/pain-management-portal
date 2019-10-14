@@ -12,6 +12,13 @@ var yyyy = today.getFullYear();
 
 today = mm + "/" + dd + "/" + yyyy;
 
+$('#patient-home-button').on('click', function(event) {
+  event.preventDefault();
+
+  
+
+})
+
 //clicking submit button after filling out the survey
 
 $("#submit-btn").on("click", function(event) {
@@ -23,15 +30,13 @@ $("#submit-btn").on("click", function(event) {
   painA = $("input:radio[name=painScaleAfter]:checked").data("value");
 
   var results = {
-    patientID: patientKey,
-    date: today,
     time: treatmentTime,
     painBefore: painB,
     painDuring: painD,
     painAfter: painA
   };
   console.log(results);
-  SESSIONS.push(results);
+  SESSIONS.update(results);
   SESSIONS.on('child_added', (snapshot) => {
     PATIENTS.child(patientKey + '/sessions').update({
       sessions: snapshot.key

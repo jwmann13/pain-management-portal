@@ -21,12 +21,11 @@ $('#patient-auth-btn').on('click', function (event) {
     SESSIONS.push(sessionInfo).once('value', function (sessSnap) {
       console.log(sessSnap.key)
       PATIENTS.child(patientKey).update({
-        sessionKeys: sessSnap.key
+        sessionKeys: {
+          0: sessSnap.key
+        }
       })
     });
-
-    // let pastSessions = PATIENTS.child(patientKey + '/sessions')
-
   });
 });
 
