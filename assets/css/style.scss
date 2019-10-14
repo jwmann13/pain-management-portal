@@ -51,7 +51,7 @@ header .logo-container {
   width: 60px;
 }
 
-header h1 {
+h1 {
   color: white;
   margin: auto;
   text-transform: uppercase;
@@ -59,6 +59,7 @@ header h1 {
   font-weight: bold;
   font-size: 1.5em;
   text-shadow: (1px 1px 3px rgba(0, 0, 0, 0.2));
+  cursor: pointer;
   @media screen and (max-width: 640px) {
     font-size: 1em;
   }
@@ -214,18 +215,23 @@ footer {
 }
 
 // Patient Authentication
-.auth-email-input{
+.auth-email-input {
   position: absolute;
   transform: translate(-50%, -50%);
-  top: 46%;
+  top: 40%;
   left: 50%;
+  font-size: 2em;
 }
 
-.auth-btn-container{
+.auth-btn-container {
   position: absolute;
   transform: translate(-50%, -50%);
   top: 53%;
   left: 50%;
+}
+
+#patient-auth-btn {
+  font-size: 2em;
 }
 
 // Patient Home
@@ -240,11 +246,6 @@ footer {
 }
 
 #survey-btn {
-  // position: absolute;
-  // top: 50%;
-  // right: 0;
-  // transform: translateY(-50%);
-  // margin-right: 40px;
   font-size: 1em;
   padding: 8px 10px 8px 10px;
 }
@@ -257,7 +258,19 @@ footer {
   border-color: black;
   border-width: 0.3px;
   float: left;
-  margin: 0px 0px 20px 20px;
+  overflow: auto;
+  overflow-y: scroll;
+  margin: 10px 0px 10px 30px;
+  padding: 5px 5px 5px 20px;
+  font-size: 1.5em;
+}
+.patient-home-pain img {
+  margin-left: 10px;
+  margin-bottom: 6px;
+}
+
+.patient-home-pain p {
+  line-height: 2em;
 }
 
 .article-container {
@@ -268,12 +281,44 @@ footer {
   border-color: black;
   border-width: 0.3px;
   float: right;
-  margin: 0px 20px 20px 20px;
+  overflow: auto;
+  overflow-y: scroll;
+  margin: 10px 30px 10px 10px;
 }
 
 .results {
   margin: 10px;
-  border-bottom: 2px solid rgb(43,131,187);
+  border-bottom: 2px solid rgb(43, 131, 187);
+  padding: 5px;
+}
+.results:hover {
+  background-color: rgb(228, 228, 228);
+}
+.article-title {
+  margin-bottom: 5px;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+}
+.article-snippet {
+  font-family: "Lato", sans-serif;
+  margin-bottom: 5px;
+}
+.article-link {
+  color: rgb(52, 52, 199);
+  display: block;
+  overflow-wrap: break-word;
+}
+.article-link:visited {
+  color: rgb(84, 178, 209);
+  text-decoration: underline;
+}
+.article-link:hover {
+  color: purple;
+}
+
+.results {
+  margin: 10px;
+  border-bottom: 2px solid rgb(43, 131, 187);
   padding: 5px;
 }
 
@@ -328,10 +373,10 @@ footer {
   background: #ffffff1f;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.24);
+  background: rgb(102, 179, 240);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.363);
+  background: rgb(89, 163, 223);
 }
 
 input[type="radio"] {

@@ -1,77 +1,82 @@
 <!DOCTYPE html>
 <html lang="en-us">
+  <head>
+    <title>Pain Treatment Plan</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="Pain Treatment Plan" />
+    <meta
+      name="keywords"
+      content="pain treatment, pain management, survey, heart rate, web developement"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Styling -->
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+    <!--Firbit API-->
+    <a
+      href="https://www.fitbit.com/oauth2/authorize?response_type=token&client_id=22B62T&redirect_uri=https%3A%2F%2Fjwmann13.github.io%2Fgt-project-1-group-11%2F&scope=activity%20heartrate%20profile%20sleep&expires_in=86400"
+    ></a>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
+    <!-- Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-<head>
-  <title>Pain Treatment Plan</title>
-  <meta charset="utf-8" />
-  <meta name="description" content="Pain Treatment Plan" />
-  <meta name="keywords" content="pain treatment, pain management, survey, heart rate, web developement" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <!-- Styling -->
-  <link rel="stylesheet" href="assets/css/reset.css" />
-  <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
-  <!--Firbit API-->
-  <a
-    href="https://www.fitbit.com/oauth2/authorize?response_type=token&client_id=22B62T&redirect_uri=https%3A%2F%2Fjwmann13.github.io%2Fgt-project-1-group-11%2F&scope=activity%20heartrate%20profile%20sleep&expires_in=86400"></a>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" />
-  <!-- Jquery -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <!-- Firebase Core JavaScript Link -->
-  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
-  <!-- Specific Firebase products we want (Database) -->
-  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
-</head>
+    <!--🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥 FIREBASE 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥 -->
+    <!-- Firebase Core JavaScript Link -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-app.js"></script>
+    <!-- Specific Firebase products we want -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-database.js"></script>
+  </head>
 
-<body>
-  <div class="page-container">
-    <header>
-      <h1><a href="index.html" class="">Pain Treatment Plan</a></h1>
-      <div class="logo-container">
-        <img id="logo" src="./assets/images/medical-logo.png" alt="" />
+  <body>
+    <div class="page-container">
+      <header>
+        <h1 onclick="window.location.href = './index.html';">
+          Pain Treatment Plan
+        </h1>
+        <div class="logo-container">
+          <img id="logo" src="./assets/images/medical-logo.png" alt="" />
+        </div>
+      </header>
+
+      <div class="patient-home-container">
+        <div class="survey-btn-container">
+          <button class="btn" id="patient-home-btn">
+            <a href="patient-survey.html" class="">Go To Survey</a>
+          </button>
+        </div>
       </div>
-    </header>
 
-    <div class="patient-home-container">
-      <div class="survey-btn-container">
-        <button class="btn" id="patient-home-btn">
-          <a href="patient-survey.html" class="">Go To Survey</a>
-        </button>
-      </div>
+      <div class="patient-home-pain"></div>
+
+      <div class="article-container container"></div>
+
+      <footer>
+        <p id="copyright">
+          Copyright &copy;
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+        </p>
+      </footer>
     </div>
-
-    <div class="patient-home-pain">
-      <table class="past-surveys">
-        <thead>
-          <tr>
-            <th>Date of Treatment</th>
-            <th>Pain Before</th>
-            <th>Pain During</th>
-            <th>Pain After</th>
-          </tr>
-        </thead>
-      </table>
-    </div>
-
-    <div class="article-container container">
-      <p></p>
-    </div>
-
-    <footer>
-      <p id="copyright">
-        Copyright &copy;
-        <script>
-          document.write(new Date().getFullYear());
-        </script>
-      </p>
-    </footer>
-  </div>
-  <!-- Javascript -->
-  <script type="text/javascript" src="assets/javascript/dbconfig.js"></script>
-  <script type="text/javascript" src="assets/javascript/FitbitAPI.js"></script>
-  <script type="text/javascript" src="assets/javascript/google-api.js"></script>
-  <script type="text/javascript" src="assets/javascript/patient-survey.js"></script>
-</body>
-
+    <!-- Javascript -->
+    <script type="text/javascript" src="assets/javascript/dbconfig.js"></script>
+    <script
+      type="text/javascript"
+      src="assets/javascript/FitbitAPI.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="assets/javascript/patient-key.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="assets/javascript/google-api.js"
+    ></script>
+  </body>
 </html>

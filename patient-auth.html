@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Enter Your Email</title>
 
     <!-- Styling -->
@@ -17,43 +16,51 @@
     />
     <!-- Jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!--🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥 FIREBASE 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥 -->
     <!-- Firebase Core JavaScript Link -->
-    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
-    <!-- Specific Firebase products we want (Database) -->
-    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
-</head>
+    <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-app.js"></script>
+    <!-- Specific Firebase products we want -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-database.js"></script>
+  </head>
 
-<body>
+  <body>
     <div class="page-container">
-        <header>
-            <h1><a href="index.html" class="">Pain Treatment Plan</a></h1>
-            <div class="logo-container">
-                <img id="logo" src="./assets/images/medical-logo.png" alt="" />
-            </div>
-        </header>
-
-        <div class="row auth-email-input">
-            <label for="patient-auth-email">Your Email:</label>
-            <input id="patient-auth-email" type="text">
+      <header>
+        <h1><a href="index.html" class="">Pain Treatment Plan</a></h1>
+        <div class="logo-container">
+          <img id="logo" src="./assets/images/medical-logo.png" alt="" />
         </div>
-        <div class="auth-btn-container">
-            <button class="btn" id="patient-auth-btn">
-                <a href="patient-home.html" class="" >Enter Your Email</a>
-            </button>
-        </div>
+      </header>
 
-        <footer>
-            <p id="copyright">
-                Copyright &copy;
-                <script>
-                    document.write(new Date().getFullYear());
-                </script>
-            </p>
-        </footer>
+      <div class="row auth-email-input">
+        <label for="patient-auth-email"></label>
+        <input id="patient-auth-email" type="text" />
+      </div>
+      <div class="auth-btn-container">
+        <button
+          onclick="window.location.href = 'patient-home.html';"
+          class="btn"
+          id="patient-auth-btn"
+        >
+          Enter Your Email
+        </button>
+      </div>
+
+      <footer>
+        <p id="copyright">
+          Copyright &copy;
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+        </p>
+      </footer>
     </div>
 
     <script type="text/javascript" src="assets/javascript/dbconfig.js"></script>
-    <script type="text/javascript" src="assets/javascript/patient-key.js"></script>
-</body>
-
+    <script
+      type="text/javascript"
+      src="assets/javascript/patient-key.js"
+    ></script>
+  </body>
 </html>

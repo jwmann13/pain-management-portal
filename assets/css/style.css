@@ -48,7 +48,7 @@ header .logo-container {
   width: 60px;
 }
 
-header h1 {
+h1 {
   color: white;
   margin: auto;
   text-transform: uppercase;
@@ -56,10 +56,11 @@ header h1 {
   font-weight: bold;
   font-size: 1.5em;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
 @media screen and (max-width: 640px) {
-  header h1 {
+  h1 {
     font-size: 1em;
   }
 }
@@ -220,8 +221,9 @@ footer {
   position: absolute;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  top: 46%;
+  top: 40%;
   left: 50%;
+  font-size: 2em;
 }
 
 .auth-btn-container {
@@ -230,6 +232,10 @@ footer {
           transform: translate(-50%, -50%);
   top: 53%;
   left: 50%;
+}
+
+#patient-auth-btn {
+  font-size: 2em;
 }
 
 .patient-home-container {
@@ -256,7 +262,20 @@ footer {
   border-color: black;
   border-width: 0.3px;
   float: left;
-  margin: 0px 0px 20px 20px;
+  overflow: auto;
+  overflow-y: scroll;
+  margin: 10px 0px 10px 30px;
+  padding: 5px 5px 5px 20px;
+  font-size: 1.5em;
+}
+
+.patient-home-pain img {
+  margin-left: 10px;
+  margin-bottom: 6px;
+}
+
+.patient-home-pain p {
+  line-height: 2em;
 }
 
 .article-container {
@@ -267,8 +286,45 @@ footer {
   border-color: black;
   border-width: 0.3px;
   float: right;
-  margin: 0px 20px 20px 20px;
-  overflow: scroll;
+  overflow: auto;
+  overflow-y: scroll;
+  margin: 10px 30px 10px 10px;
+}
+
+.results {
+  margin: 10px;
+  border-bottom: 2px solid #2b83bb;
+  padding: 5px;
+}
+
+.results:hover {
+  background-color: #e4e4e4;
+}
+
+.article-title {
+  margin-bottom: 5px;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+}
+
+.article-snippet {
+  font-family: "Lato", sans-serif;
+  margin-bottom: 5px;
+}
+
+.article-link {
+  color: #3434c7;
+  display: block;
+  overflow-wrap: break-word;
+}
+
+.article-link:visited {
+  color: #54b2d1;
+  text-decoration: underline;
+}
+
+.article-link:hover {
+  color: purple;
 }
 
 .results {
@@ -333,11 +389,11 @@ footer {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.24);
+  background: #66b3f0;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.363);
+  background: #59a3df;
 }
 
 input[type="radio"] {

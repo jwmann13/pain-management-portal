@@ -3,6 +3,7 @@ var patientAge;
 var patientFitbit;
 var patientEmail;
 var lastRecordedSession;
+var patientID = "-LrApnbhBiQeU7HfpmZW";
 
 // Capture Button Click
 $("#add-btn").on("click", function(event) {
