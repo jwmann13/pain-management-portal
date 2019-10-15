@@ -1,4 +1,5 @@
 //global variables
+var patientList;
 var treatmentTime;
 var painB;
 var painD;
@@ -16,8 +17,16 @@ $("#patient-home-button").on("click", function(event) {
   event.preventDefault();
 });
 
-//clicking submit button after filling out the survey
+//console logs patient list
+PATIENTS.on(
+  "value",
+  function(snapshot) {
+    patientList = snapshot.val();
+  },
+  console.log(patientList)
+);
 
+//clicking submit button after filling out the survey
 $("#submit-btn").on("click", function(event) {
   event.preventDefault();
 
@@ -34,6 +43,7 @@ $("#submit-btn").on("click", function(event) {
   };
   console.log(results);
   SESSIONS.update(results);
+  // SESSIONS.push(results);
   SESSIONS.on("child_added", snapshot => {
     PATIENTS.child(patientKey + "/sessions").update({
       sessions: snapshot.key
@@ -41,14 +51,27 @@ $("#submit-btn").on("click", function(event) {
   });
 });
 
-var patientlist;
-
-PATIENTS.on(
-  "value",
+//write results to treatment session result areas
+SESSIONS.on(
+  "child_added",
   function(snapshot) {
-    patientList = snapshot.val();
+    // storing the snapshot.val() in a variable for convenience
+    var snapVal = snapshot.val();
+
+    addSessionRow(snapVal, snapshot.ref.key);
+
+    // Handle the errors
   },
   function(errorObject) {
-    console.log("The read failed: " + errorObject.code);
+    console.log("Error: " + errorObject.code);
   }
 );
+
+function addSessionRow() {
+  const displayResultsArea = document.querySelector(".patient-home-pain");
+  let dataHtml = `<p>${"Treatment Time: " + treatmentTime}</p></br>
+                  <p>${"Pain Before: " + painB}</p></br>
+                  <p>${"Pain During: " + painD}</p></br>
+                  <p>${"Pain After: " + painA}</p></br>`;
+  displayResultsArea.innerHTML += dataHtml;
+}
