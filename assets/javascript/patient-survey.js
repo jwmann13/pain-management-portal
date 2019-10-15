@@ -1,9 +1,9 @@
 //global variables
 var patientList;
 var treatmentTime;
-var painB = 0;
-var painD = 0;
-var painA = 0;
+var painB;
+var painD;
+var painA;
 
 //current date
 var today = new Date();
