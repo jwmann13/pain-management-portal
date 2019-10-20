@@ -2,7 +2,7 @@
 var url = window.location.href;
 //getting the access token from url
 var access_token =
-  "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyMkI2MlQiLCJzdWIiOiI3VDIzMjkiLCJpc3MiOiJGaXRiaXQiLCJ0eXAiOiJhY2Nlc3NfdG9rZW4iLCJzY29wZXMiOiJ3aHIgd3BybyB3bnV0IHdzbGUgd3dlaSB3c29jIHdhY3Qgd3NldCB3bG9jIiwiZXhwIjoxNTcxNDE5MjE2LCJpYXQiOjE1NzA4OTA4MTZ9.mubIeZA6bdh6Q834LH84enZEQYvCOHYNDYCrkzWtqIw";
+  "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyMkI2MlQiLCJzdWIiOiI3VDIzMjkiLCJpc3MiOiJGaXRiaXQiLCJ0eXAiOiJhY2Nlc3NfdG9rZW4iLCJzY29wZXMiOiJ3aHIgd3NsZSIsImV4cCI6MTU3MjIwMDU1OSwiaWF0IjoxNTcxNTk1Nzc2fQ.cFnvzm2J8TKecgGS2R-1nXl3rsmPSAtdn0Uy-3kXh9c";
 
 // var access_token = url.split("#")[1].split("=")[1].split("&")[0];
 // get the userid
@@ -54,7 +54,10 @@ xhr.onload = function() {
     $(".patient-home-pain").prepend(`
        <div>${"Resting Heart Rate: " +
          results.value
-           .restingHeartRate}<img src="./assets/images/Fitbit_Logo.png" alt="Fitbit Logo"></div>`);
+           .restingHeartRate} BPM <img src="./assets/images/Fitbit_Logo.png" alt="Fitbit Logo"></div>
+           <div>${"Peak Heart Rate: " +
+             results.value.heartRateZones[3]
+               .max} BPM <img src="./assets/images/Fitbit_Logo.png" alt="Fitbit Logo"></div>`);
   }
 };
 xhr.send();
