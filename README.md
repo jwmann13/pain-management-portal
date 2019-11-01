@@ -1,4 +1,4 @@
-# gt-project-1-group-11
+# Pain Management Portal
 
 ## Description
 For this project, we took the problem of pain and opioid
@@ -21,3 +21,9 @@ A functioning web app that supports Google Custom Search and Fitbit APIs, as wel
 **Note: API keys may require reauthentication due to expiration or a url change.**
 
 Deployed at: https://jwmann13.github.io/gt-project-1-group-11
+
+## What we learned
+* Group project collaboration through Github
+* Orgaizing group tasks and assigning roles
+* API integration with wearable tech
+* Pitching the project
