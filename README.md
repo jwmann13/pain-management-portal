@@ -20,7 +20,7 @@ A functioning web app that supports Google Custom Search and Fitbit APIs, as wel
 
 **Note: API keys may require reauthentication due to expiration or a url change.**
 
-Deployed at: https://jwmann13.github.io/gt-project-1-group-11
+Deployed at: https://jwmann13.github.io/pain-management-portal/
 
 ## What we learned
 * Group project collaboration through Github
